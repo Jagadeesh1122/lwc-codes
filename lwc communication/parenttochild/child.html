@@ -1,0 +1,20 @@
+<template>
+    <div>
+      {textMessage}
+    </div>
+    <div>
+      {recordList}
+    </div>
+    <!--<div>
+      {contactRecordsList}
+      <lightning-input label="Name" value={contactRecordsList.Name}></lightning-input>
+      <lightning-input label="Id" value={contactRecordsList.id}></lightning-input>
+    </div>-->
+
+    <template for:each={contactRecordsList} for:item="user">
+      <div key={user.id}>
+          <p>{user.Name}</p>
+          <p>{user.id}</p>
+      </div>
+  </template>
+</template>
